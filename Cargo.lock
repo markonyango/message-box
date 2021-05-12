@@ -4,7 +4,7 @@
 name = "bindings"
 version = "0.1.0"
 dependencies = [
- "windows",
+ "windows 0.9.1 (git+https://github.com/microsoft/windows-rs)",
 ]
 
 [[package]]
@@ -18,7 +18,7 @@ name = "message-box"
 version = "0.1.0"
 dependencies = [
  "bindings",
- "windows",
+ "windows 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -63,8 +63,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "361f3533a83ee1a28c9be59683f40043db02dbedf6479ce8795657386195c97f"
 dependencies = [
  "const-sha1",
- "windows_gen",
- "windows_macros",
+ "windows_gen 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "windows_macros 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "windows"
+version = "0.9.1"
+source = "git+https://github.com/microsoft/windows-rs#e366c7a93a3732ecf4f76264183951d2ed5df797"
+dependencies = [
+ "const-sha1",
+ "windows_gen 0.9.1 (git+https://github.com/microsoft/windows-rs)",
+ "windows_macros 0.9.1 (git+https://github.com/microsoft/windows-rs)",
 ]
 
 [[package]]
@@ -77,11 +87,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "windows_gen"
+version = "0.9.1"
+source = "git+https://github.com/microsoft/windows-rs#e366c7a93a3732ecf4f76264183951d2ed5df797"
+
+[[package]]
 name = "windows_macros"
 version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0f7794c652845dc466cb8dc1b86c08345707c8144bc53e9086430047c7d33b76"
 dependencies = [
  "syn",
- "windows_gen",
+ "windows_gen 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "windows_macros"
+version = "0.9.1"
+source = "git+https://github.com/microsoft/windows-rs#e366c7a93a3732ecf4f76264183951d2ed5df797"
+dependencies = [
+ "syn",
+ "windows_gen 0.9.1 (git+https://github.com/microsoft/windows-rs)",
 ]
